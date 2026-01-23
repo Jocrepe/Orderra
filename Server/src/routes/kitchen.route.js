@@ -3,6 +3,6 @@ import { getKitchenOrders, updateKitchenOrder } from '../controllers/kitchen.con
 const router = express.Router()
 
 router.get('/', getKitchenOrders)
-router.patch('/', updateKitchenOrder)
+router.patch('/:orderId', updateKitchenOrder)
 
 export default router

@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Barriecito&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Short+Stack&display=swap');
 @import "tailwindcss";
 @plugin "daisyui" {
   themes: caramellatte --default;
 }
 
 body {
-      font-family: "Barriecito", system-ui;
+      font-family: "Short Stack", cursive;
 }

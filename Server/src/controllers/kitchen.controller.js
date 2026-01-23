@@ -14,8 +14,8 @@ export const getKitchenOrders = async (req, res, next) => {
 
 export const updateKitchenOrder = async (req, res, next) => {
     try {
-        const {orderItemId, newStatus} = req.body
-        const result = await KitchenService.updateKitchenOrder(orderItemId, newStatus)
+        const {orderId} = req.params
+        const result = await KitchenService.updateKitchenOrder(orderId)
         res.status(200).json({
             message: "ITEM UPDATED",
             data: result
