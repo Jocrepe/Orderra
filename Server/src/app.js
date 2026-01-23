@@ -7,7 +7,7 @@ import menuRoutes from './routes/menu.route.js'
 
 const app = express()
 app.use(cors({
-    origin: 'http://localhost:3000',
+    origin: ['http://localhost:3000', 'https://orderra.vercel.app/'],
     methods: ['GET', 'POST', 'PATCH'],
     credentials: true
 }))
