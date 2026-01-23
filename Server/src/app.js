@@ -1,10 +1,6 @@
 import express from 'express'
 import cors from 'cors'
-app.use(cors({
-    origin: ['http://localhost:3000', 'https://orderra.vercel.app'],
-    methods: ['GET', 'POST', 'PATCH'],
-    credentials: true
-}))
+
 
 import orderRoutes from './routes/order.route.js'
 import kitchenRoutes from './routes/kitchen.route.js'
@@ -13,6 +9,12 @@ import menuRoutes from './routes/menu.route.js'
 const app = express()
 
 app.use(express.json())
+app.use(cors({
+    origin: ['http://localhost:3000', 'https://orderra.vercel.app'],
+    methods: ['GET', 'POST', 'PATCH'],
+    credentials: true
+}))
+app.options('*', cors())
 
 app.use('/uploads', express.static('uploads'))
 
