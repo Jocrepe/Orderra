@@ -11,7 +11,7 @@ export default defineNuxtConfig({
   modules: ['@pinia/nuxt'],
   runtimeConfig: {
     public: {
-      apiBase: 'http://localhost:8888'
+      apiBase: 'https://orderra.onrender.com'
     }
   }
 })
